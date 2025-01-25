@@ -1,0 +1,9 @@
+[package]
+name = "rs-dispatcher"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde_json.workspace = true
+rs-strategy = { path = "../rs-strategy" }
+rs-primitives = { path = "../rs-primitives" }

@@ -1,0 +1,9 @@
+[package]
+name = "rs-onchain"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde_json.workspace = true
+serde.workspace = true
+rs-strategy = { path = "../rs-strategy" }

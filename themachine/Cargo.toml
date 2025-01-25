@@ -4,3 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+colored.workspace = true
+actix-web.workspace = true
+rs-service = { path = "../rs-service" }

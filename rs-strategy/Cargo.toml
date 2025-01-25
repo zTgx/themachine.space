@@ -1,0 +1,8 @@
+[package]
+name = "rs-strategy"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde_json.workspace = true
+rs-primitives = { path = "../rs-primitives" }
