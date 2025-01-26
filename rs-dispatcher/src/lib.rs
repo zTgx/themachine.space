@@ -1,3 +1,4 @@
+use rs_onchain::OnchainEngine;
 use rs_primitives::{request::XRequest, traits::OnChainQuery};
 use rs_strategy::Strategy;
 
@@ -7,10 +8,11 @@ pub enum DispatcherType {
     Offchain,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Clone)]
 pub struct Dispatcher {
     pub r#type: DispatcherType,
     pub strategy: Strategy,
+    pub engine: OnchainEngine,
 }
 
 impl Dispatcher {
@@ -18,16 +20,17 @@ impl Dispatcher {
         Self {
             r#type: DispatcherType::Onchain,
             strategy: Strategy::Default,
+            engine: OnchainEngine::new(),
         }
     }
 }
 
 impl Dispatcher {
     pub async fn dispatch_onchain(&self, data: impl OnChainQuery) -> serde_json::Value {
-        self.strategy.apply(&data).await
+        self.engine.scan(&self.strategy, &data).await
     }
 
-    pub async fn dispatch_offchain(&self, data: XRequest) -> serde_json::Value {
-        self.strategy.apply_x(data).await
+    pub async fn dispatch_offchain(&self, _data: XRequest) -> serde_json::Value {
+        unimplemented!()
     }
 }

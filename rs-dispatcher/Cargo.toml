@@ -7,3 +7,4 @@ edition.workspace = true
 serde_json.workspace = true
 rs-strategy = { path = "../rs-strategy" }
 rs-primitives = { path = "../rs-primitives" }
+rs-onchain = { path = "../rs-onchain" }

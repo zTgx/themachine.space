@@ -7,3 +7,5 @@ edition.workspace = true
 serde_json.workspace = true
 serde.workspace = true
 rs-strategy = { path = "../rs-strategy" }
+rs-primitives = { path = "../rs-primitives" }
+rs-psql = { path = "../rs-psql" }
