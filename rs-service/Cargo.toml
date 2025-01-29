@@ -7,5 +7,6 @@ edition = "2021"
 actix-web.workspace= true
 serde_json.workspace = true
 serde.workspace = true
+solagent.workspace = true
 rs-primitives = { path = "../rs-primitives" }
 rs-dispatcher = { path = "../rs-dispatcher" }

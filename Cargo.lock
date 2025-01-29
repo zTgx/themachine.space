@@ -3525,6 +3525,7 @@ dependencies = [
  "rs-primitives",
  "serde",
  "serde_json",
+ "solagent",
 ]
 
 [[package]]
@@ -4038,9 +4039,9 @@ dependencies = [
 
 [[package]]
 name = "solagent"
-version = "0.1.9"
+version = "0.1.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "57b834de7f3c8214d00affad36f9f46f5cdff9ec27b85b4c291d775c3c0cdb8a"
+checksum = "652335a3552a8de455f8b0effe20bd8eb70974dfb1054edb0a63a6a49f28691f"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -4049,8 +4050,6 @@ dependencies = [
  "helius",
  "lazy_static",
  "mpl-token-metadata",
- "proc-macro2",
- "quote",
  "reqwest 0.12.12",
  "rig-core",
  "serde",
@@ -4062,7 +4061,6 @@ dependencies = [
  "spl-associated-token-account 6.0.0",
  "spl-token 7.0.0",
  "spl-token-2022 6.0.0",
- "syn 2.0.96",
  "thiserror 2.0.11",
 ]
 
